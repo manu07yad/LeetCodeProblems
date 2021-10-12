@@ -1,0 +1,29 @@
+class Solution {
+public:
+    bool isPalindrome(int x) 
+    {
+         int temp,rem=0;
+        unsigned long long rev=0;
+        int s=10;
+        temp=x;
+        if(temp<0)
+        {
+            return false;
+        }
+        while(temp!=0)
+        {
+            rem=temp%10;
+            rev=(rev*10)+rem;
+            temp=temp/10;
+        }
+        if(rev==x)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+        
+    }
+};
